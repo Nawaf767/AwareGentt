@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from api.agents import router as agents_router
 from api.knowledge import router as knowledge_router, seed_knowledge_base
 from api.workflow import router as workflow_router
+from config import settings
 
 
 @asynccontextmanager
@@ -23,9 +24,13 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+allow_origins = ["http://localhost:3000", "http://127.0.0.1:3000"]
+if settings.frontend_url:
+    allow_origins.append(settings.frontend_url)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=allow_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

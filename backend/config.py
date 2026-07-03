@@ -9,6 +9,7 @@ class Settings(BaseSettings):
     embedding_model: str = "all-MiniLM-L6-v2"
     llm_model: str = "qwen/qwen3.6-27b"
     collection_name: str = "awaregent_kb"
+    frontend_url: str = ""
 
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
 
