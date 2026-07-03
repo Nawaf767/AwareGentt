@@ -68,14 +68,14 @@ export function Topbar() {
           <DropdownMenuTrigger
             render={
               <Button variant="outline" size="sm" className="hidden h-8 gap-1.5 text-xs sm:flex">
-                بنك ميريديان الأول
+                بنك الانماء
                 <ChevronsUpDown className="h-3 w-3 text-muted-foreground" />
               </Button>
             }
           />
           <DropdownMenuContent align="start" className="w-56">
             <DropdownMenuLabel className="text-xs text-muted-foreground">المؤسسة</DropdownMenuLabel>
-            <DropdownMenuItem>بنك ميريديان الأول</DropdownMenuItem>
+            <DropdownMenuItem>بنك الانماء</DropdownMenuItem>
             <DropdownMenuItem>أطلس كابيتال بارتنرز</DropdownMenuItem>
             <DropdownMenuItem>صندوق ميريديان للفرص</DropdownMenuItem>
             <DropdownMenuSeparator />
